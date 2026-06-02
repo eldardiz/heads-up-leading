@@ -28,12 +28,21 @@ hasn't fully cut ties. Worth knowing before the meeting.
 - **Concept DNA** → Iron Forums (Christian leadership world, Connect/Sharpen/Grow tone).
 - **All content** → Gary's LinkedIn profile.
 
-## Build decisions (confirmed with partner)
+## Build decisions
 
-- **Accent:** warm gold/amber (`#A87A2C`) on a light/warm canvas — keeps a quiet thread to
-  Iron Forums' gold without going dark.
-- **Scope:** tight one-pager — Hero → Credentials → Stats → Hat Rack Model → Services → About → Connect.
-- **Type:** Fraunces (display serif, warm/premium) + Inter (body).
+- **v2 (current): rebuilt to match the Harmonise look and feel 1:1.** Partner asked for the
+  actual Harmonise design language, not a different premium take. I studied the real site
+  (computed tokens + full screenshot pass) and replicated its design system with Gary's content.
+- **Design language (lifted from Harmonise, verified against the live site):**
+  - Canvas: warm ivory `#FEFFEE`; panels: sand `#EFE9D5` / `#E2D4B9`; dark: espresso `#403427`.
+  - Type: **Instrument Serif** for big elegant headlines (matches Harmonise exactly) + **Inter** body.
+  - Fully-rounded pill buttons + floating pill nav (icon + links pill + dark Book pill).
+  - Sections mirror Harmonise: full-bleed dark hero w/ serif headline bottom-left, sand marquee
+    strip, centered serif statement with floating tags, bordered 4-col stats bar, sticky-left
+    philosophy + scrolling numbered cards, 2x2 dark service cards, accordion FAQ, dark footer CTA,
+    multi-column footer.
+- **Content stays Gary's**; we replicated the visual style, not their copy.
+- **v1 (superseded):** a warmer gold/serif (Fraunces) take that did NOT match Harmonise. Replaced.
 
 ## Tech
 
@@ -44,14 +53,16 @@ hasn't fully cut ties. Worth knowing before the meeting.
 
 ## Sections (all copy is real, sourced from his LinkedIn; no em dashes)
 
-1. **Nav** — "Heads Up Leading" wordmark, links, "Book Gary" CTA
-2. **Hero** — "Helping the new leader lead well." + Hat Rack Model kicker
-3. **TrustRow** — credentials marquee (John Maxwell, ICF, Kolbe, West Point, EdD, Army)
-4. **Stats** — 50+ yrs · 3,000+ led · $11M turnaround · 27 yrs ministry (count-up on scroll)
-5. **Hat Rack Leadership Model** — his 3 questions: Caring / Competent / Character
-6. **Services** — Speaking · Coaching · Team Development · Non-profit Consulting
-7. **About Gary** — West Point → Army → Salvation Army $11M turnaround → EdD → certifications
-8. **Connect** — "Everyone deserves to be led well." closing CTA + footer
+1. **Nav** — floating pill: "HU" monogram + links pill + dark "Book Gary" pill
+2. **Hero** — full-bleed dark block, serif "Helping the new leader lead well" bottom-left, 2 pills
+3. **Marquee** — sand pill strip of focus areas (Hat Rack Model, Communication, etc.)
+4. **Statement** — big centered serif line + floating credential tags
+5. **Stats** — bordered 4-col bar: 50+ yrs · 3,000+ led · $11M turnaround · 27 yrs (count-up)
+6. **Hat Rack Model** — sticky-left heading + scrolling cards: Caring / Competent / Character
+7. **Services** — 2x2 dark cards: Speaking · Coaching · Team Development · Non-profit
+8. **About Gary** — portrait slot + West Point → Army → $11M turnaround → EdD → certifications
+9. **FAQ** — accordion (what is the model, who you work with, faith-based, speaking, coaching)
+10. **CTA** — dark block "Everyone deserves to be led well" + multi-column footer
 
 ---
 
@@ -59,19 +70,19 @@ hasn't fully cut ties. Worth knowing before the meeting.
 
 | Item | Current state | Action needed |
 |------|--------------|---------------|
-| **Portrait of Gary** | "GW" monogram placeholder block in About | Need a real hi-res photo of Gary (LinkedIn shots are too low-res to pull) |
+| **Photos (hero, services x4, about, CTA)** | Styled espresso gradient slots labeled "Photo" | Drop in real photography. Auto-stock returned junk (kittens), so slots are intentional placeholders. Need Gary speaking / portrait / candid shots, or approve AI-generated/licensed stock |
+| **Portrait of Gary** | "GW" monogram on a dark block in About | Real hi-res headshot (LinkedIn shots too low-res to pull) |
 | **Contact email** | `mailto:gary@headsupleading.com` (invented) | Confirm his real email + whether headsupleading.com domain exists |
 | **Phone** | Not present | Add if he wants one |
 | **Booking** | CTA is a mailto, no scheduler | Add Calendly/booking link if he uses one |
-| **Testimonials** | Not included (one-pager scope) | His Iron Forums network has 5 named members; could seed real quotes in a v2 |
-| **Logo** | Text wordmark only | Design a real logo/mark if he wants one |
+| **Testimonials** | Not included | His Iron Forums network has 5 named members; could seed real quotes later |
+| **Logo** | Text wordmark + "HU" monogram only | Design a real logo/mark if he wants one |
 
-## Suggested v2 additions (if he bites)
+## Suggested next additions (if he bites)
 
-- Testimonials section (borrow/adapt from his network)
-- FAQ accordion ("What is the Hat Rack Model?", "Do you work with non-profits?", "Faith-based?")
+- Real photography in the existing photo slots (biggest single upgrade to the feel)
+- Testimonials section (Harmonise has a strong one; borrow/adapt from his network)
 - A speaking/topics page or one-sheet
-- Real photography throughout (Harmonise stays typography-led, so 2–3 strong shots is enough)
 
 ## How to iterate
 
