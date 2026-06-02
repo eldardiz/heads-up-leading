@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Instrument_Serif, Inter } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "./components/SmoothScroll";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const instrument = Instrument_Serif({
+  variable: "--font-instrument",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: "400",
   style: ["normal", "italic"],
 });
 
@@ -30,9 +30,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} antialiased`}
+      className={`${instrument.variable} ${inter.variable} antialiased`}
     >
-      <body className="min-h-screen bg-background text-foreground">
+      <body className="min-h-screen bg-bg text-ink">
         <SmoothScroll />
         {children}
       </body>

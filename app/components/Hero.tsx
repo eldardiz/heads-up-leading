@@ -6,75 +6,66 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-40 pb-24">
-      <div className="hero-glow" aria-hidden />
+    <section className="px-3 pt-3">
+      <div className="block-dark relative flex min-h-[88vh] flex-col justify-end overflow-hidden rounded-[34px]">
+        <span className="slot-label">Photo of Gary</span>
 
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
-        {/* eyebrow */}
-        <motion.div
-          initial={{ y: 8, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease, delay: 0.1 }}
-          className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-border bg-surface/70 px-4 py-1.5 backdrop-blur-sm"
-        >
-          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
-          <span className="kicker">The Hat Rack Leadership Model</span>
-        </motion.div>
+        {/* soft bottom scrim so text reads */}
+        <div
+          className="pointer-events-none absolute inset-0 z-[1]"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(20,16,11,0.15) 0%, rgba(20,16,11,0) 35%, rgba(20,16,11,0.55) 100%)",
+          }}
+          aria-hidden
+        />
 
-        {/* headline */}
-        <motion.h1
-          initial={{ y: 24, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.85, ease, delay: 0.15 }}
-          className="font-display text-balance text-[clamp(2.6rem,6.5vw,5rem)] font-medium leading-[1.02] tracking-[-0.02em] text-foreground"
-        >
-          Helping the new leader{" "}
-          <span className="italic text-accent-deep">lead well.</span>
-        </motion.h1>
-
-        {/* subhead */}
-        <motion.p
-          initial={{ y: 16, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease, delay: 0.3 }}
-          className="mt-7 max-w-2xl text-balance text-[18px] leading-[1.6] text-text-dim"
-        >
-          Everything rises and falls on leadership. Gary Wilson trains new and
-          struggling leaders to serve with clarity, competence, and character,
-          at home, in the community, and in business.
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          initial={{ y: 16, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease, delay: 0.45 }}
-          className="mt-9 flex flex-col items-center gap-3 sm:flex-row"
-        >
-          <a
-            href="#connect"
-            className="btn-ink inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[15px] font-medium"
+        <div className="relative z-[2] max-w-3xl px-7 pb-12 sm:px-12 sm:pb-16">
+          <motion.span
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease, delay: 0.1 }}
+            className="mb-6 inline-flex items-center gap-2 rounded-full bg-cream/15 px-4 py-1.5 text-[13px] font-medium text-cream backdrop-blur-sm"
           >
-            Book Gary to speak
-            <span aria-hidden>→</span>
-          </a>
-          <a
-            href="#model"
-            className="inline-flex items-center gap-2 rounded-full border border-border-strong bg-surface px-7 py-3.5 text-[15px] font-medium text-foreground transition-colors hover:bg-surface-2"
-          >
-            Explore the model
-          </a>
-        </motion.div>
+            <span className="h-1.5 w-1.5 rounded-full bg-cream/80" />
+            Leadership Speaker · Coach · Trainer
+          </motion.span>
 
-        {/* role line */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease, delay: 0.7 }}
-          className="mt-8 text-[13px] tracking-[0.04em] text-text-faint"
-        >
-          Keynote Speaker · Executive Coach · Certified John Maxwell Trainer
-        </motion.p>
+          <motion.h1
+            initial={{ y: 24, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.85, ease, delay: 0.15 }}
+            className="font-display text-cream text-[clamp(2.9rem,7.5vw,6rem)] leading-[1.0] tracking-[-0.02em]"
+          >
+            Helping the new leader lead well
+          </motion.h1>
+
+          <motion.p
+            initial={{ y: 16, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7, ease, delay: 0.32 }}
+            className="mt-6 max-w-xl text-[16px] leading-[1.6] text-cream/75"
+          >
+            Everything rises and falls on leadership. Gary Wilson trains new and
+            struggling leaders to serve with clarity, competence, and character,
+            through the Hat Rack Leadership Model.
+          </motion.p>
+
+          <motion.div
+            initial={{ y: 16, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7, ease, delay: 0.45 }}
+            className="mt-8 flex flex-col gap-3 sm:flex-row"
+          >
+            <a href="#connect" className="pill pill-light">
+              Book Gary to speak
+              <span aria-hidden>→</span>
+            </a>
+            <a href="#model" className="pill pill-ghost">
+              Explore the model
+            </a>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
