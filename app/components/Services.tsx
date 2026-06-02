@@ -8,18 +8,26 @@ const services = [
   {
     title: "Keynote Speaking",
     body: "Talks that move individuals, associations, and businesses toward leading well, on leadership, communication, growth, and team development.",
+    img: "/images/speaking.jpg",
+    alt: "Warm gathering",
   },
   {
     title: "Executive & Business Coaching",
     body: "One on one coaching for new and struggling leaders who want to grow. ICF certified, John Maxwell certified, Kolbe informed.",
+    img: "/images/coaching.jpg",
+    alt: "Two people in conversation",
   },
   {
     title: "Team & Leadership Development",
     body: "Organize your team around a single leadership model and grow key leaders in the competencies that drive performance.",
+    img: "/images/team.jpg",
+    alt: "Open countryside road",
   },
   {
     title: "Non-profit Consulting",
     body: "Decades leading mission-driven organizations through growth, turnaround, and change, spiritually, functionally, and financially.",
+    img: "/images/nonprofit.jpg",
+    alt: "Horizon at dusk",
   },
 ];
 
@@ -44,12 +52,17 @@ export function Services() {
             transition={{ duration: 0.6, ease, delay: (i % 2) * 0.08 }}
             className="block-dark group relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-[26px] p-8"
           >
-            <span className="slot-label">Photo</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={s.img}
+              alt={s.alt}
+              className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
             <div
               className="pointer-events-none absolute inset-0 z-[1]"
               style={{
                 background:
-                  "linear-gradient(180deg, rgba(20,16,11,0.1) 0%, rgba(20,16,11,0) 40%, rgba(20,16,11,0.6) 100%)",
+                  "linear-gradient(180deg, rgba(20,16,11,0.25) 0%, rgba(20,16,11,0.1) 40%, rgba(20,16,11,0.78) 100%)",
               }}
               aria-hidden
             />

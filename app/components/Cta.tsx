@@ -8,10 +8,15 @@ export function Cta() {
   return (
     <section id="connect" className="scroll-mt-24 px-3 pb-3">
       <div className="block-dark relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden rounded-[34px] px-6 text-center">
-        <span className="slot-label">Photo of Gary</span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/cta.jpg"
+          alt="Mountain valley path"
+          className="absolute inset-0 z-0 h-full w-full object-cover"
+        />
         <div
           className="pointer-events-none absolute inset-0 z-[1]"
-          style={{ background: "rgba(20,16,11,0.35)" }}
+          style={{ background: "rgba(20,16,11,0.52)" }}
           aria-hidden
         />
         <div className="relative z-[2] max-w-2xl">

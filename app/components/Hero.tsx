@@ -8,14 +8,19 @@ export function Hero() {
   return (
     <section className="px-3 pt-3">
       <div className="block-dark relative flex min-h-[88vh] flex-col justify-end overflow-hidden rounded-[34px]">
-        <span className="slot-label">Photo of Gary</span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/hero.jpg"
+          alt="Sunrise over open country"
+          className="absolute inset-0 z-0 h-full w-full object-cover"
+        />
 
-        {/* soft bottom scrim so text reads */}
+        {/* scrim so text reads over the photo */}
         <div
           className="pointer-events-none absolute inset-0 z-[1]"
           style={{
             background:
-              "linear-gradient(180deg, rgba(20,16,11,0.15) 0%, rgba(20,16,11,0) 35%, rgba(20,16,11,0.55) 100%)",
+              "linear-gradient(180deg, rgba(20,16,11,0.35) 0%, rgba(20,16,11,0.1) 35%, rgba(20,16,11,0.7) 100%)",
           }}
           aria-hidden
         />
